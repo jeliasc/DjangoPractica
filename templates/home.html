@@ -1,0 +1,24 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+    .inicio-fondo {
+        min-height: calc(100dvh - 80px);
+        background-image: url("{% static 'img/django-practica.jpg' %}");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    @media (max-width: 768px) {
+        .inicio-fondo {
+            background-size: contain;
+            background-color: #ffffff;
+        }
+    }
+</style>
+
+<div class="inicio-fondo"></div>
+{% endblock %}
